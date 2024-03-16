@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PAGINATION - FORM TASK</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div>
+    <h1 id="title">"DOM PAGINATION - FORM TASK" Achieved by DOM Manipulation with Form</h1>
+    <p id="description">This is a simple form with Firstname, Lastname,gender,food,addresss, Pincode, State ,Country . on Submission, the Entered value is Dynamically added to a Table & get  Displayed in Column of the table</p>
+    </div>
+
+    <form id="form">
+        <div class="form-group">
+        <label for="first-name">FIRST NAME:</label>
+        <input type="text" id="first-name" placeholder="First-Name" required>
+        
+        <label for="last name">LAST NAME:</label>
+        <input type="text" id="last-name" name="lastname" placeholder="Last-Name" required>
+
+        <label for="address">ADDRESS:</label>
+        <textarea id="address" name="Address" placeholder="Address" required></textarea><br>
+
+        <label for="pincode">PINCODE:</label>
+        <input type="text" id="pincode" name="pincode" placeholder="Pincode" required><br>
+
+        <label>GENDER:</label>
+        <label for="male">
+        <input type="radio" id="male" name="gender" value="male" required> MALE
+        </label>
+        <label for="female">
+        <input type="radio" id="female" name="gender" value="female" required> FEMALE
+        </label><br>
+
+        <label for="food-choice">Choice of Food:</label>
+        <select id="food-choice" name="foodChoice" required>
+            <option value="Briyani">Briyani</option>
+            <option value="Veg-Thali">Veg-Thali</option>
+            <option value="Tandoori">Tandoori</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Juice's">Juice's</option>
+        </select><br>
+
+        <label for="state">State :</label>
+        <input type="text" id="state" name="state" placeholder="State" required><br>
+
+        <label for="country">Country :</label>
+        <input type="text" id="country" name="country" placeholder="Country" required><br>
+
+
+        <button type="button" class="btn btn-primary" id="submit" onclick="submitForm()">Submit</button>
+        </div>
+    </form>
+
+
+    <table id="dataTable" class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Choice of Food</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    
+
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
